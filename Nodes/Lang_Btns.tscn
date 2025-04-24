@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Nodes/Lang_Btns.gd" type="Script" id=1]
+[ext_resource path="res://ASSETS/Fonts/for chat names.tres" type="DynamicFont" id=2]
+[ext_resource path="res://ASSETS/Fonts/new_dynamicfont small.tres" type="DynamicFont" id=3]
+
+[node name="Lang_Btns" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -904.0
+margin_bottom = -500.0
+script = ExtResource( 1 )
+
+[node name="Eng" type="CheckBox" parent="."]
+margin_top = 28.0
+margin_right = 50.0
+margin_bottom = 52.0
+custom_fonts/font = ExtResource( 3 )
+text = "Eng"
+
+[node name="Amh" type="CheckBox" parent="."]
+margin_left = 72.0
+margin_top = 29.0
+margin_right = 144.0
+margin_bottom = 66.0
+custom_fonts/font = ExtResource( 3 )
+text = "Amh"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 147.0
+margin_bottom = 29.0
+custom_fonts/font = ExtResource( 2 )
+text = "Pick Language"
+
+[connection signal="pressed" from="Eng" to="." method="_on_Eng_pressed"]
+[connection signal="pressed" from="Amh" to="." method="_on_Amh_pressed"]
